@@ -67,7 +67,7 @@ def extract_all(raw_dir, output_path):
         results.append(data)
         print(f"Done — {len(data['text'])} characters extracted")
     
-    # Save results to JSON file
+    # Save results to JSON file with proper formatting
     with open(output_path, "w", encoding="utf-8") as f:
         json.dump(results, f, indent=2, ensure_ascii=False)
     
