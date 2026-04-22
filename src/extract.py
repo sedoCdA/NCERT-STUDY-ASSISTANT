@@ -17,7 +17,7 @@ def clean_text(text):
             continue
         
         # Skip figure labels like "Fig 8.1" or "Figure 8.1"
-        if re.match(r"^[Ff]ig(ure)?\.?\s*\d+", line):
+        if re.match(r"^[Ff]ig.(ure)?\.?\s*\d+", line):
             continue
         
         # Skip very short lines like headings or labels (less than 4 words)
