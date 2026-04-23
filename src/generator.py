@@ -1,13 +1,20 @@
 import os
 import sys
+import streamlit as st
 from groq import Groq
 from dotenv import load_dotenv
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from src.retriever import load_chunks, build_index, retrieve
 
-# Load environment variables from .env file
-load_dotenv()
+def get_api_key():
+    # First try Streamlit secrets (works on Streamlit Cloud)
+    try:
+        return st.secrets["GROQ_API_KEY"]
+    except:
+        # Fall back to .env file (works locally)
+        load_dotenv()
+        return os.getenv("GROQ_API_KEY")
 
 def build_prompt(question, chunks):
     # Join all retrieved chunks into one context string
@@ -39,7 +46,7 @@ def answer(question):
     prompt = build_prompt(question, retrieved_chunks)
     
     # Call Groq API with temperature=0 for reproducibility
-    client = Groq(api_key=os.getenv("GROQ_API_KEY"))
+    client = Groq(api_key=get_api_key())
     response = client.chat.completions.create(
         model="llama-3.1-8b-instant",
         messages=[{"role": "user", "content": prompt}],
@@ -54,14 +61,9 @@ def answer(question):
 
 if __name__ == "__main__":
     # Test with an in-scope question
-    # Debug: print what chunks were actually retrieved
     result = answer("What is F = ma?")
     print("Answer:", result["answer"])
-    #print("\n--- Retrieved Chunks ---")
-    #for c in result["chunks"]:
-    #   print(f"\nChunk {c['chunk_id']}:")
-    #   print(c["text"][:400])
-
+    
     print("\n" + "="*50 + "\n")
     
     # Test with an out-of-scope question (should refuse)
