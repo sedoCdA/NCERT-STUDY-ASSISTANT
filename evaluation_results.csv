@@ -1,0 +1,25 @@
+id,type,question,answer,chunks_retrieved,refused,correctness,grounding,refusal_appropriate
+1,direct,How does the chapter define Inertia?,"The chapter defines inertia as the ""property of an object to resist change in its state of motion.""","[12, 0, 11]",False,,,
+2,direct,State Newton's First Law of Motion.,An object remains in a state of rest or of uniform motion in a straight line unless compelled to change that state by an external force.,"[6, 23, 22]",False,,,
+3,direct,What is the definition of Momentum?,I don't have enough information in my notes to answer this.,"[29, 26, 0]",True,,,
+4,direct,What is the mathematical formula for Momentum (p)?,I don't have enough information in my notes to answer this.,"[14, 16, 28]",True,,,
+5,direct,Provide the mathematical formulation of the Second Law of Motion (Force in terms of mass and acceleration).,"The mathematical formulation of the Second Law of Motion is given as:
+
+F = ma
+
+Where:
+- F is the applied force
+- m is the mass of the object
+- a is the acceleration, which is the rate of change of velocity.","[14, 20, 16]",False,,,
+6,direct,"What is the formula for the Conservation of Momentum for two objects (m1, m2) before and after a collision?",I don't have enough information in my notes to answer this.,"[27, 16, 25]",True,,,
+7,direct,"According to the chapter, why does a fielder pull his hands backwards while catching a fast-moving cricket ball?",The fielder pulls his hands backwards while catching a fast-moving cricket ball to increase the time during which the high velocity of the moving ball decreases to zero. This decreases the acceleration of the ball and therefore reduces the impact of catching the fast-moving ball.,"[15, 0, 10]",False,,,
+8,direct,Explain the example of the glass pane breaking when hit by a fast-moving stone vs a slow-moving one.,I don't have enough information in my notes to answer this.,"[10, 11, 26]",True,,,
+9,direct,What is the SI unit of Force and its symbol?,"The SI unit of force is kg m s-2 or newton, which has the symbol N.","[15, 24, 13]",False,,,
+10,direct,What are the SI units of Momentum?,I don't have enough information in my notes to answer this.,"[14, 15, 24]",True,,,
+11,paraphrased,Why is it difficult to suddenly stop or start moving when you are standing in a bus that abruptly changes its motion?,"It is difficult to suddenly stop or start moving when you are standing in a bus that abruptly changes its motion because of the law of inertia. According to the law of inertia, an object tends to remain in its state of motion unless compelled to change that state by an external force. When the bus suddenly stops or starts moving, our body tends to continue in the same state of motion because of its inertia. This causes us to fall forward when the bus stops and backward when it starts moving.","[10, 6, 24]",False,,,
+12,paraphrased,Why can a small bullet cause significantly more damage than a larger object thrown by hand at low speed?,"It's because the bullet has a small mass but a high velocity, which results in a significant impact. This is in contrast to a larger object thrown by hand at low speed, which has a larger mass but a lower velocity, resulting in less impact.","[9, 10, 12]",False,,,
+13,paraphrased,Why does a rowing boat move backward when a sailor jumps out of it in the forward direction?,"The force exerted by the sailor on the boat when he jumps out in the forward direction is an action force. The boat exerts an equal and opposite force on the sailor, which is a reaction force. Since the sailor has a much smaller mass than the boat, the acceleration of the sailor is much greater than the acceleration of the boat. As a result, the boat moves backward.","[22, 23, 1]",False,,,
+14,out_of_scope,What are the primary differences between aerobic and anaerobic respiration?,I don't have enough information in my notes to answer this.,"[26, 1, 2]",True,,,
+15,out_of_scope,Who was the first Prime Minister of independent India?,I don't have enough information in my notes to answer this.,"[10, 8, 9]",True,,,
+16,out_of_scope,Which planet in our solar system is famously known as the Red Planet?,I don't have enough information in my notes to answer this.,"[6, 7, 15]",True,,,
+17,out_of_scope,Explain how a massive object like a star can warp the fabric of spacetime to create a black hole.,I don't have enough information in my notes to answer this.,"[12, 10, 26]",True,,,
