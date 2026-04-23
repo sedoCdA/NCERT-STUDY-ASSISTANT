@@ -32,9 +32,13 @@ Context:
 Question: {question}
 Answer:"""
 
+# Get absolute path relative to this file
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+CHUNKS_PATH = os.path.join(BASE_DIR, "data", "processed", "chunks.json")
+
 def answer(question):
     # Load chunks from disk
-    chunks = load_chunks("data/processed/chunks.json")
+    chunks = load_chunks(CHUNKS_PATH)
     
     # Build BM25 index from chunks
     index = build_index(chunks)
