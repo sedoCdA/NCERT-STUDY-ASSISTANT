@@ -1,6 +1,6 @@
-# 📚 NCERT Class 9 Science Study Assistant
+# NCERT Class 9 Science Study Assistant
 
-A retrieval-augmented generation (RAG) based study assistant that answers questions grounded strictly in NCERT Class 9 Science content. Built as part of Week 9 Mini-Project — PG Diploma in AI-ML & Agentic AI Engineering.
+A retrieval-augmented generation (RAG) based study assistant that answers questions grounded strictly in NCERT Class 9 Science content. 
 
 Live Link : https://ncert-study-assistant-jreoqmevbx9rykyie7cthz.streamlit.app/
 ---
@@ -133,7 +133,7 @@ Evaluated on 17 questions across three types:
 | Paraphrased | 3 | 3 | 0 |
 | Out-of-scope | 4 | — | — |
 
-**Out-of-scope refusal rate: 4/4 (100%)** ✅
+**Out-of-scope refusal rate: 4/4 (100%)** 
 
 **Key finding:** BM25 fails on momentum-related questions because the word "momentum" appears in context but the query words ("definition", "formula", "SI units") don't co-occur with it in the same chunks. This is BM25's core limitation — keyword matching without semantic understanding.
 
@@ -160,7 +160,7 @@ Full results: see `evaluation_results.csv`
 
 ## Data Source
 
-NCERT Class 9 Science Textbook — Official Source:
+NCERT Class 9 Science Textbook - Official Source:
 https://ncert.nic.in/textbook.php?iesc1=0-15
 
 PDF files are not committed to this repository. Download directly from NCERT.
