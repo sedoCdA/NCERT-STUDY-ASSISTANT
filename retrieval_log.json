@@ -1,0 +1,102 @@
+[
+  {
+    "question": "What is Newton first law of motion?",
+    "top_chunks": [
+      {
+        "chunk_id": "31",
+        "content_type": "",
+        "text": " the bullet. The third law of\nmotion can also be illustrated when a sailor\njumps out of a rowing boat. As the sailor\njumps forward, the force on the b"
+      },
+      {
+        "chunk_id": "8",
+        "content_type": "",
+        "text": "\nmotion is stated as:\nAn object remains in a state of rest or of\nuniform motion in a straight line unless\ncompelled to change that state by an\nIn othe"
+      },
+      {
+        "chunk_id": "0",
+        "content_type": "",
+        "text": "In the previous chapter, we described the\nmotion of an object along a straight line in\nterms of its position, velocity and acceleration.\nWe saw that s"
+      }
+    ]
+  },
+  {
+    "question": "What is the definition of momentum?",
+    "top_chunks": [
+      {
+        "chunk_id": "17",
+        "content_type": "",
+        "text": " fired\nfrom a gun. These observations suggest that\nthe impact produced by the objects depends\non their mass and velocity. Similarly, if an\nobject is t"
+      },
+      {
+        "chunk_id": "19",
+        "content_type": "",
+        "text": "pose an object of mass, m is moving along\na straight line with an initial velocity, u. It is\nuniformly accelerated to velocity, v in time, t\nby the ap"
+      },
+      {
+        "chunk_id": "18",
+        "content_type": "",
+        "text": "with a dead battery is to be pushed along a\nstraight road to give it a speed of 1 m s-1, which\nis sufficient to start its engine. If one or two\nperson"
+      }
+    ]
+  },
+  {
+    "question": "What is the SI unit of force?",
+    "top_chunks": [
+      {
+        "chunk_id": "19",
+        "content_type": "",
+        "text": "pose an object of mass, m is moving along\na straight line with an initial velocity, u. It is\nuniformly accelerated to velocity, v in time, t\nby the ap"
+      },
+      {
+        "chunk_id": "17",
+        "content_type": "",
+        "text": " fired\nfrom a gun. These observations suggest that\nthe impact produced by the objects depends\non their mass and velocity. Similarly, if an\nobject is t"
+      },
+      {
+        "chunk_id": "22",
+        "content_type": "",
+        "text": " \u2013 mu\nThat is, when F = 0, v = u for whatever time,\nt is taken. This means that the object will\ncontinue moving with uniform velocity, u\nthroughout th"
+      }
+    ]
+  },
+  {
+    "question": "Why does a fielder pull his hands back while catching a ball?",
+    "top_chunks": [
+      {
+        "chunk_id": "21",
+        "content_type": "",
+        "text": " therefore the impact\nof catching the fast moving ball (Fig. 8.8) is\nalso reduced. If the ball is stopped suddenly\nthen its high velocity decreases to"
+      },
+      {
+        "chunk_id": "14",
+        "content_type": "",
+        "text": " football\nto another player of his team who\nkicks the football towards the\ngoal. The goalkeeper of the\nopposite team collects the football\nand kicks i"
+      },
+      {
+        "chunk_id": "28",
+        "content_type": "",
+        "text": "\nfrictional force exerted by the table is\nopposite to the direction of motion of\n8.5 Third Law of Motion\nThe first two laws of motion tell us how an\na"
+      }
+    ]
+  },
+  {
+    "question": "What is the formula for acceleration?",
+    "top_chunks": [
+      {
+        "chunk_id": "19",
+        "content_type": "",
+        "text": "pose an object of mass, m is moving along\na straight line with an initial velocity, u. It is\nuniformly accelerated to velocity, v in time, t\nby the ap"
+      },
+      {
+        "chunk_id": "20",
+        "content_type": "",
+        "text": " the amount that produces an\nacceleration of 1 m s-2 in an object of 1 kg mass.\n1 unit of force = k \u00d7 (1 kg) \u00d7 (1 m s-2).\nThus, the value of k becomes"
+      },
+      {
+        "chunk_id": "16",
+        "content_type": "",
+        "text": " we kick a stone of the same size with\nequal force, it hardly moves. We may, in fact,\nget an injury in our foot while doing so!\nSimilarly, in activity"
+      }
+    ]
+  }
+]

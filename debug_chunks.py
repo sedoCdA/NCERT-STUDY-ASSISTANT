@@ -1,9 +1,8 @@
-# add temporarily to debug_chunks.py
 import json
-with open('data/processed/chunks.json', encoding="utf-8") as f:
+
+with open('data/processed/wk10_chunks.json', encoding="utf-8") as f:
     chunks = json.load(f)
 
-for c in chunks:
-    if 'momentum' in c['text'].lower():
-        print(f"Chunk {c['chunk_id']}: {c['text'][:200]}")
-        print('---')
+for c in chunks[-5:]:
+    print(f'Chunk {c["chunk_id"]}: {c["text"][:150]}')
+    print()

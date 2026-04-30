@@ -1,39 +1,44 @@
 import chromadb
 from sentence_transformers import SentenceTransformer
 import json
-
+import os
 
 def embed_and_store(chunks_path, vectorstore_path):
-    # 1. Load chunks from chunks.json
+    # Load wk10 chunks
     with open(chunks_path, "r", encoding="utf-8") as f:
         chunks = json.load(f)
-    # 2. Load the embedding model
-    #    model = SentenceTransformer("all-MiniLM-L6-v2")
-    #    This is a small, fast, free model — 384 dimensions
+
+    # Load embedding model
     model = SentenceTransformer("all-MiniLM-L6-v2")
-    
-    # 3. Create ChromaDB client pointing to vectorstore/ folder
+
+    # Create ChromaDB client
     client = chromadb.PersistentClient(path=vectorstore_path)
 
-    # 4. Create a collection (like a table in a database)
+    # Delete old collection if exists to avoid conflicts
+    try:
+        client.delete_collection(name="ncert_chunks")
+        print("Deleted old collection")
+    except:
+        pass
+
+    # Create fresh collection
     collection = client.get_or_create_collection(name="ncert_chunks")
-    
-    # 5. For each chunk:
-    #    - Get the text
-    #    - Create embedding using model.encode(text)
-    #    - Store in collection with:
+
+    # Embed and store each chunk with content_type in metadata
     for chunk in chunks:
-    # Create embedding for this chunk's text
         embedding = model.encode(chunk["text"])
         collection.add(
             ids=[str(chunk["chunk_id"])],
             embeddings=[embedding.tolist()],
             documents=[chunk["text"]],
-            metadatas=[{"chapter": chunk["chapter"]}]
+            metadatas=[{
+                "chapter": chunk["chapter"],
+                "content_type": chunk["content_type"],
+                "token_count": chunk["token_count"]
+            }]
         )
-    
-    # 6. Print how many chunks were embedded
-    print(f"Embedded and stored {len(chunks)} chunks in ChromaDB at {vectorstore_path}")
+
+    print(f"Embedded and stored {len(chunks)} chunks in ChromaDB")
 
 if __name__ == "__main__":
-    embed_and_store("data/processed/chunks.json", "vectorstore")
+    embed_and_store("data/processed/wk10_chunks.json", "vectorstore")
