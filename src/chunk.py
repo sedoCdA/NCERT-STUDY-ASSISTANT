@@ -7,8 +7,8 @@ def get_content_type(text):
     # Detect worked examples by "Example" followed by a number
     if re.search(r'Example\s+\d+', text):
         return "worked_example"
-    # Detect exercises by keyword or question mark at end
-    if "EXERCISES" in text or text.strip().endswith("?"):
+    # Detect exercises by question patterns within the text
+    if re.search(r'\?\s', text) or "EXERCISES" in text or re.search(r'^\s*\d+\s*\.', text, re.MULTILINE):
         return "question_or_exercise"
     # Everything else is prose
     return "prose"
