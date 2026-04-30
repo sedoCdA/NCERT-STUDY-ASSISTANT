@@ -21,7 +21,7 @@ def retrieve_dense(query, collection, model, top_k=3):
     # 1. Embed the query using the same model
     query_embedding = model.encode(query).tolist()
     
-    # 2. Query ChromaDB for most similar chunks
+    # 2. Query ChromaDB for most similar chunks to the query embedding
     results = collection.query(
         query_embeddings=[query_embedding],
         n_results=top_k
