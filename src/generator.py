@@ -33,15 +33,14 @@ Question: {question}
 Answer:"""
 
 def build_prompt_v2(question, chunks):
-    # Strict prompt — refusal + citation required
     context = "\n\n".join(f"[Source: chunk_{c['chunk_id']}]\n{c['text']}" for c in chunks)
-    return f"""You are a study assistant for NCERT Class 9 Science.
+    return f"""You are a study assistant for NCERT Class 9 Science Chapter 8 - Force and Laws of Motion ONLY.
 Use ONLY the context below to answer.
 After every factual claim cite the source e.g. [Source: chunk_id].
-If the question is not about Class 9 Science topics in the context,
-or if the answer cannot be found in the context, reply exactly:
-"I don't have that in my study materials."
-Do NOT use any outside knowledge.
+If the question asks about topics not covered in the context below,
+or requires knowledge beyond what is explicitly stated in the context,
+reply exactly: "I don't have that in my study materials."
+Do NOT use any outside knowledge. Do NOT infer or extend beyond the context.
 
 Context:
 {context}
