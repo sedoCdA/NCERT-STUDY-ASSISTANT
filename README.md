@@ -2,12 +2,12 @@
 
 A retrieval-augmented generation (RAG) based study assistant that answers questions grounded strictly in NCERT Class 9 Science content. Built across Week 9 and Week 10 of the PG Diploma in AI-ML & Agentic AI Engineering.
 
-🔗 **Live Demo:** [Add your Streamlit URL here]
+🔗 **Live Demo:** (https://ncert-study-assistant-jreoqmevbx9rykyie7cthz.streamlit.app/)
 ---
 
 ## What It Does
 
-- Answers questions from NCERT Class 9 Science — Chapter 8 (Force and Laws of Motion)
+- Answers questions from NCERT Class 9 Science - Chapter 8 (Force and Laws of Motion)
 - Retrieves relevant textbook chunks before generating any answer
 - Cites source chunk IDs inline after every factual claim
 - Refuses to answer when the question is out of scope or answer is not in the textbook
@@ -110,7 +110,7 @@ enables filtered retrieval.
 Problem: LLM interpreted this loosely - answered out-of-scope questions
 using relevant-looking chunks instead of refusing.
 
-**v2 — Strict:**
+**v2 - Strict:**
 ```
 "You are a study assistant for NCERT Class 9 Science Chapter 8 ONLY.
 Use ONLY the context below to answer.
@@ -122,7 +122,7 @@ Do NOT use any outside knowledge. Do NOT infer or extend beyond the context."
 Fix: Added explicit scope boundary, citation requirement, and strict
 refusal instruction. Out-of-scope refusal improved from 2/3 to 3/3.
 
-### Retrieval — BM25 vs Dense
+### Retrieval - BM25 vs Dense
 
 | | BM25 | Dense (sentence-transformers) |
 |---|---|---|
